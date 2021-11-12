@@ -1,0 +1,46 @@
+\documentclass[11pt]{scrartcl}
+\usepackage[nottoc,numbib]{tocbibind}
+\bibliographystyle{plain}
+\author{Juan-Carlos Barros et Daniel Kessler}
+\date{\today}
+\title{Conception d'une séquence d'enseignement\\\medskip
+  \large GymInf, Didactique de l'informatique, Rendu 010}
+
+%% CONFIGURATION
+% configuration générale
+\usepackage[l2tabu, orthodox]{nag}  % demander indication d'usages désuets
+\usepackage{microtype}  % subtiles améliorations de certains défauts
+\usepackage[french]{babel}  % langue du document
+
+% configuration des polices de caractère / aspect du titre
+\usepackage[utf8]{inputenc}  % nécessaire en MS-Windows, pas dans Linux
+                             % (probablement pas dans MacOS non plus)
+\usepackage{tgtermes} % police de caractères principale
+
+% pdfisation avec liens
+\usepackage[pdfstartview=FitH,
+pdfauthor={Juan-Carlos Barros et Daniel Kessler},
+pdftitle={Conception d'une séquence},
+pdflang=French]{hyperref}
+\usepackage{xcolor}
+\definecolor{pdflinkcolor}{RGB}{30,60, 120}
+\hypersetup{colorlinks=true, allcolors=pdflinkcolor}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\pagebreak
+
+\section{Introduction}
+Comme l'indique notre plan d'étude cantonal \cite{pecinfo}, bla.
+
+\section{bla}
+bli blo.
+
+\bibliography{biblio}
+
+\vfill
+\emph{Document réalisé en \href{https://www.latex-project.org/}{\LaTeX}}
+\end{document}
