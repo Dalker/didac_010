@@ -5,3 +5,5 @@
 *.toc
 *.pdf
 *.out
+*.bcf
+*.xml
