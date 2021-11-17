@@ -30,6 +30,19 @@
 \usepackage[T1]{fontenc}  % <- c'est nécessaire dans window$, je crois
 % \usepackage{tgtermes} %  (semble nécessiter lualatex)
 
+% configuration géométrie / en-tête / pieds de page
+% remplacer 2.2 par 1.2 ci-dessous avec scrartcl (mise en page de base différente)
+\addtolength{\voffset}{-2.2cm}   % reprendre la place de l'en-tête inexistante
+\addtolength{\textheight}{4.2cm} % laisser plus de place pour le pied de page
+\usepackage[compatV3]{fancyhdr}  % gestion d'en-tête et pied de page
+\pagestyle{fancy}
+\renewcommand\headrulewidth{0pt}   % pas de barre sous en-tête
+\renewcommand\footrulewidth{0.4pt} % barre sur pied de page
+\usepackage{lastpage}
+\lfoot{pièce 010} \cfoot{} \rfoot{page \thepage/\pageref{LastPage}}
+\fancypagestyle{plain}{  % style pour page de titre (pas de bas de page)
+  \fancyhf{}\fancyfoot{}\renewcommand\footrulewidth{0pt} % barre sur pied de page
+}
 % pdfisation avec liens un peu bleus mais pas trop
 \usepackage[pdfstartview=FitH,
 pdfauthor={Juan-Carlos Barros et Daniel Kessler},
@@ -39,6 +52,7 @@ pdftitle={Conception d'une séquence}]{hyperref}
 \hypersetup{colorlinks=true, allcolors=pdflinkcolor}
 
 \begin{document}
+\thispagestyle{plain}  % page de garde sans bas de page
 
 % Démarrage avec titre et table des matières sur page séparée
 \maketitle
@@ -331,6 +345,7 @@ change ou que d'autres outils plus adaptés à cette exploration intellectuelle
 fondamentale apparaissent et nos élèves pourraient bien en être les futurs
 auteurs\ldots
 
+\pagebreak
 % On finit avec sa bibliographie, son colophon et ses annexes
 \printbibliography  % pas numéroté, automatiquement au toc
 \vfill
