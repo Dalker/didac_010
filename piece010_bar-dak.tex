@@ -61,18 +61,17 @@ pdftitle={Conception d'une séquence}]{hyperref}
 
 % Et c'est parti pour du contenu!
 \section{Contexte institutionnel et disciplinaire}
-Nous enseignons tous deux au niveau gymnasial dans le Collège de Genève. Dans ce
+Nous enseignons tous deux au niveau gymnasial dans le Collège de Genève (Gymnase). Dans ce
 cadre, nous avons cette année plusieurs groupes d'élèves de 1ère année
 informatique discipline fondamentale, auxquels s'adresse le travail présenté
 dans ce document. Ces groupes sont constitués de 16 élèves au maximum, issus
-potentiellement de plusieurs ``classes'' (le concept de ``classe'' est très flou
-au Collège, les élèves changeant souvent de groupe pour des matières à effectif
-réduit, selon leur niveau de maths, leurs choix d'options, etc.).
+potentiellement de plusieurs ``classes', OS, etc.  (le concept de ``classe'' est très flou
+au Collège, les élèves changeant souvent de groupe).
 
 La séquence d'enseignement que nous allons présenter possède deux
-caractéristiques distinctives:
+caractéristiques originales:
 \begin{itemize}
-\item Elle se déroule sur plusieurs leçons, en prenant 20-30 minutes du cours à
+\item Elle se déroule sur plusieurs leçons (minimum  6), en prenant 20-30 minutes du cours à
   chaque fois.
 \item Elle combine des objectifs explicites pour les élèves avec des objectifs
   implicites qui seront explicités plus tard.
@@ -84,37 +83,43 @@ caractères \textsc{ascii}, bitmaps) et travaillé un petit peu sur les composan
 matériels d'un ordinateur, éléments du chapitre \textit{Information et Données}
 du plan d'étude cantonal genevois \autocite{pecinfo}.
 
-L'objectif explicite initial de la séquence présentée dans ce document est
-d'approfondir un des éléments précédents, à travers un travail de groupe sur un
-sujet qui n'a été qu'effleuré pendant la première partie de l'année scolaire
-(par exemple l'encodage des nombres à virgule flottante, la parenté entre les
-composants d'un smartphone et ceux d'un PC, etc.)
+L'objectif explicite initial sera développé dans la partie suivante. L'originalité de cette séquence 
+repose sur le deuxième objectif. Celui-ci consiste à découvrir la puissance des outils informatiques 
+de collaboration pour déboucher finalement sur un exemple iconique: \textit{Wikipedia}.
 
-Le deuxième objectif, initialement implicite, est de comprendre comment
-fonctionne un \textit{wiki} en en utilisant un comme outil, pour découvrir
-finalement que certains wikis sont très ouverts aux contributions publiques,
-notamment \textit{Wikipedia}. Après avoir expérimenté le travail sur un wiki, un
-élève devrait comprendre le mécanisme de base et se sentir capable de contribuer
-à Wikipedia s'il ou elle y repère une coquille à corriger, une information
-caduque ou incomplète, etc. Ce deuxième objectif participe à plusieurs thèmes du
-plan d'étude notamment les \textit{Réseaux}, \textit{Information et Données} et
-la \textit{Citoyenneté Numérique}.
+Ce deuxième objectif participe à plusieurs thèmes du plan d'étude, notamment les
+\textit{Réseaux}, \textit{Information et Données} et la \textit{Citoyenneté
+  Numérique}.
 
 \section{Objectifs pédagogiques}
-La majorité de cette séquence se déroule en suivant le paradigme
-\textit{socio-constructiviste} (cf. \cite{kozanitis}). En effet, les élèves
-construisent une partie de leur propre connaissance en effectuant leurs propres
-recherches et en collaborant avec leurs camarades.
+L'objectif ``alibi'' (ou explicite) de la séquence présentée dans ce document
+est d'approfondir un des éléments précédents, à travers un travail de groupe sur
+un sujet vu ``de haut'' et pour lequel on aimerait avoir des approfondissements
+sur certaines parties particulièrement intéressantes.  Par exemple, dans notre
+cas, nous avons décidé d'approfondir la représentation des données à travers
+l'étude de l'encodage des nombres à virgule flottante, des nombres relatifs, des
+caractères avec notamment \textsc{utf}-8, des images en couleur, etc.).
+Toutefois, il faut bien comprendre que cette séquence est adaptable et peut
+s'intercaler où l'on veut dans l'année car il suffit de choisir des sujets de
+projets en lien avec le(s) dernier(s) chapitre(s) abordé(s). Cela permet de ne
+pas trop s'attarder sur des notions qui pourraient autrement prendre beaucoup de
+place dans le planning des leçons; elles seront prémâchées à travers les projets
+``par les élèves, pour les élèves''.
 
-Cependant, cela n'empêche pas quelques moments ``frontaux'', notamment vers le
-début pour présenter l'outil (le wiki dans Moodle) et à la fin pour l'épilogue
-(lien avec Wikipedia).
+L'objectif principal, quant à lui, repose sur la découverte des outils de
+collaboration. On veut amener les élèves à en apercevoir le potentiel.  On fera
+donc utiliser aux élèves un \textit{wiki} pour partager le fruit de leur
+recherche explicite.  Ce n'est qu'en fin de séquence qu'on leur fera découvrir
+que certains wikis sont très ouverts aux contributions publiques, notamment
+\textit{Wikipedia}.  Après avoir expérimenté le travail sur un wiki, un élève
+devrait comprendre le mécanisme de base et se sentir capable de contribuer à
+\textit{Wikipedia}, que ce soit en repérant une coquille à corriger, une
+information caduque ou incomplète, voire en produisant de nouvelles pages.
+
 
 \section{Scénario d'apprentissage}
 Les élèves seront amenés à travailler entre 20 et 30 minutes chaque semaine,
-pendant 6 semaines, sur l'approfondissement d'un sujet effleuré pendant la
-partie précédente du cours (encodage d'un type de donnée pas encore vu en détail
-ou étude d'un aspect matériel d'un ordinateur). Le travail s'effectue en grande
+pendant 6 semaines, sur leurs projets. Le travail s'effectue en grande
 partie autour de la conception d'un wiki par chaque groupe. Une fois ce travail
 achevé, une transposition est effectuée du mode de travail employé par les
 élèves vers la manière dont fonctionne Wikipedia, en clarifiant que les élèves
@@ -125,16 +130,19 @@ Voici le calendrier général de la séquence.
 \begin{tabular}{rp{.7\textwidth}}
   semaine 1& les groupes et les sujets sont définis\\
   semaine 2& le wiki du groupe a au moins 2 pages différentes et 3 liens
-              externes vers des sources;
-              la répartition des tâches au sein du groupe (qui fait quoi) est claire et documentée\\
+             externes vers des sources;
+             la répartition des tâches au sein du groupe (qui fait quoi) est claire et documentée\\
   semaine 3& toutes les informations utiles ont été trouvées et répertoriées
-              (liens vers sources);
-              un élève d'un autre groupe devrait pouvoir bien comprendre le sujet grâce à ce wiki\\
+             (liens vers sources);
+             un élève d'un autre groupe devrait pouvoir bien comprendre le sujet grâce à ce wiki\\
   semaine 4& chaque élève a lu le wiki d'un autre groupe et fourni des commentaires utiles à celui-ci\\
   semaine 5& le wiki est fini et complet, en prenant en compte les remarques des
              camarades d'autres groupes qui l'ont lu\\
-  semaine 6& présentation orale (10 min) avec support à choix (le wiki lui-même
-             ou autre)\\
+  semaine 6& présentation orale (10 min) en se servant du wiki \\
+% dommage de ne pas privilégier le Wiki ici: 
+% pourquoi leur proposer de présenter à l'aide d'un autre outil?
+% ça c'est le problème d'avoir copié-collé mon machin fait avant qu'on décide de
+% se projet => je change ici *et* dans la version pour mes élèves  
   semaine 7& debriefing et présentation de Wikipedia
 \end{tabular}  
 \end{center}
@@ -144,7 +152,7 @@ modèle de Robert Bibeau \autocite{bibeau}.
 
 \subsection{Mise en situation}
 L'enseignant explique à la classe que tout en démarrant un nouveau thème de
-travail, le thème précédent sera approfondi par des travaux de groupe auxquelles
+travail, le thème précédent sera approfondi par des travaux de groupe auxquels
 20 à 30 minutes de temps du cours sera consacré pendant les 6 prochains cours.
 La première semaine, il est juste question de constituer des groupes, choisir un
 sujet et effectuer une brève recherche préliminaire de sources. Il n'est pas
@@ -159,11 +167,11 @@ balader entre les groupes et s'assurer que chacun arrive à choisir un thème qu
 est pertinent pour le cours et intéresse réellement les élèves du groupe.
 
 \subsection{Situation d'apprentissage}
-Les élèves ont accès assez vite à une version en-ligne du calendrier suivant des
+Les élèves ont accès assez vite à une version en-ligne du calendrier des
 objectifs minimaux à atteindre chaque semaine pour les semaines 2 à 6. Ce
 calendrier peut être adapté suivant les éventuels imprévus.
 
-Une fois les groupes constituées, un moment ``frontal'' d'une dizaine de minutes
+Une fois les groupes constitués, un moment ``frontal'' d'une dizaine de minutes
 est utilisé par l'enseignant pour montrer aux élèves les rudiments du
 fonctionnement du wiki sur Moodle (notamment comment créer un lien vers une
 autre page du wiki, déjà existante ou pas, et comment créer un lien vers une
@@ -224,13 +232,16 @@ expérience de travail avec plusieurs wikis et seront donc compétents pour le
 faire.
 
 \section{Courant et stratégie pédagogiques}
-Une bonne part de la séquence proposée est appelée à se dérouler sous forme de
+Une bonne partie de la séquence proposée est appelée à se dérouler sous forme de
 ``petites équipes pour permettre l'apprentissage par les pairs et la
-collaboration'', ce qui d'après Kozanitis \cite{kozanitis} correspond au modèle
-socio-constructiviste. Kozanitis rappelle par ailleurs que dans ce modèle
-didactique, ``l'enseignant doit veiller en permanence les [sic] productions de
-l'étudiant et ses processus d'apprentissage''.
-% "veiller les productions" ? <-- (sic) [cet article a plein de fautes de français)
+collaboration'', ce qui d'après Anastassis Kozanitis (\cite{kozanitis})
+correspond au modèle socio-constructiviste. Kozanitis rappelle par ailleurs que
+dans ce modèle didactique, ``l'enseignant doit veiller en permanence les [sic]
+productions de l'étudiant et ses processus d'apprentissage''.  Par ailleurs,
+quelques parties ``frontales'' sont également nécessaires, notamment vers le
+début pour présenter l'outil (le wiki dans Moodle) et à la fin pour l'épilogue
+(lien avec Wikipedia).
+
 Quant aux niveaux des connaissances abordées, ils évoluent sur deux plans
 parallèles.
 
@@ -243,7 +254,7 @@ la mise en place d'exemples explicatifs de leur sujet de recherche (par exemple,
 encodage et décodage d'un nombre à virgule flottante) et la connaissance
 meta-cognitive (évaluation de leur sujet d'apprentissage afin d'en transmettre
 les avantages et inconvénients), on peut constater qu'on traverse tous les
-niveaux taxonomiques de Bloom \cite{bloom}, ce qui rend la méthode de cette séquence
+niveaux taxonomiques de Bloom (cf. \cite{bloom}), ce qui rend la méthode de cette séquence
 particulièrement intéressante.
 
 \subsection{Plan des sujets implicites: Wikis -> Wikipedia -> Open Source}
@@ -272,7 +283,7 @@ contentent de copier-coller les contenus et ne retiennent pas grand-chose des
 sujets explicites de recherche.
 
 Toutefois, cette difficulté n'est pas imputable à la modalité de cette séquence.
-L'autre sujet (implicite) peut aussi intéresser les élèves\ldots ou pas! Il est
+L'autre sujet (implicite) peut aussi intéresser les élèves\ldots\ ou pas! Il est
 probable que l'aspect de partage, d'utopie internet, voire scientifique ne
 rentre pas dans la plus haute priorité intellectuelle de l'élève. A nous de
 trouver les accroches en taquinant leurs conceptions pour réveiller l'intérêt
@@ -296,38 +307,39 @@ sera certainement nécessaire pour suivre de manière efficace et bienveillante
 les projets.
 
 \section{Motivation des élèves et valeurs personnelles}
-Comme l'indique Duplessis \cite{duplessis}, nous pouvons nous attendre à des
-\textit{à priori} des élèves ``sur le monde en général et les objets d'étude en
-particulier''. En ce qui nous concerne, nous nous attendons à ce qu'ils
-s'imaginent que le savoir appris à l'école en général et sur Wikipedia en
-particulier sont des sources de connaissance dont les élèves ne sont ni auteurs ni
-acteurs. Duplessis nous indique qu'``apprendre nécessite que ces conceptions
+Comme l'indique Pascal Duplessis (\cite{duplessis}), nous pouvons nous attendre
+à des \textit{a priori} des élèves ``sur le monde en général et les objets
+d'étude en particulier''. En ce qui nous concerne, nous nous attendons à ce
+qu'ils s'imaginent que le savoir appris à l'école en général et sur Wikipedia en
+particulier sont des sources de connaissance dont les élèves ne sont ni auteurs
+ni acteurs. Duplessis nous indique qu'``apprendre nécessite que ces conceptions
 soient progressivement transformées''. Nous espérons qu'à travers le scénario
 d'apprentissage proposé, l'élève devienne plus ``acteur'' de son acquisition de
 connaissance, et que le futur citoyen aie conscience qu'il peut aussi contribuer
-à la connaissance générale au moyen de media collaboratifs comme Wikipedia.
-De plus, un ``objectif caché'' lié à nos valeurs personnelles est de faire
+à la connaissance générale au moyen de media collaboratifs comme Wikipedia.  De
+plus, un ``objectif caché'' lié à nos valeurs personnelles est de faire
 découvrir la force du logiciel libre et du \textit{open content} à nos élèves,
 sans en faire pour autant un exposé théorique.
  
-Nous espérons aussi que le mode de travail sera motivant pour les élèves. Viau
-\cite{viau} argumente que l' ``apprentissage par projet est l'activité
-d'apprentissage qui est perçue par les étudiants comme la plus utile, dans
-laquelle ils se sentent le plus compétents et sur laquelle ils ont le sentiment
-d'avoir le plus de contrôle''. D'après Rolland Viau, ces sentiments de
-\textit{compétence} et \textit{contrôle} sont fondamentaux pour que l'élève se
-sente bien dans son rôle et puisse ainsi être efficace dans son apprentissage.
-En l'occurrence, le contrôle est justement intrinsèquement lié au travail avec
-des outils \textit{ouverts}, tels que l'encyclopédie en-ligne Wikipedia: on
-n'est pas juste utilisateur, on peut apporter sa contribution à l'outil.
+Nous espérons aussi que le mode de travail sera motivant pour les
+élèves. Rolland Viau (\cite{viau}) argumente que l' ``apprentissage par projet
+est l'activité d'apprentissage qui est perçue par les étudiants comme la plus
+utile, dans laquelle ils se sentent le plus compétents et sur laquelle ils ont
+le sentiment d'avoir le plus de contrôle''. D'après Rolland Viau, ces sentiments
+de \textit{compétence} et \textit{contrôle} sont fondamentaux pour que l'élève
+se sente bien dans son rôle et puisse ainsi être efficace dans son
+apprentissage.  En l'occurrence, le contrôle est justement intrinsèquement lié
+au travail avec des outils \textit{ouverts}, tels que l'encyclopédie en-ligne
+Wikipedia: on n'est pas juste utilisateur, on peut apporter sa contribution à
+l'outil.
 
 L'apprentissage de la Science Informatique devrait aller de pair avec un
-changement du regard sur le monde. Jean-Pierre Astolfi \cite{astolfi} considère
-justement qu'une discipline ``ne se définit pas d'abord par les objets de son
-domaine empirique, mais par le type de cadrage théorique original que produisent
-les concepts'' et qu'elle ``n'est pas une accumulation de données [\ldots] mais
-l'entrée dans une interprétation experte du monde, plus puissante que celle du
-sens commun''.
+changement du regard sur le monde. Jean-Pierre Astolfi (\cite{astolfi})
+considère justement qu'une discipline ``ne se définit pas d'abord par les objets
+de son domaine empirique, mais par le type de cadrage théorique original que
+produisent les concepts'' et qu'elle ``n'est pas une accumulation de données
+[\ldots] mais l'entrée dans une interprétation experte du monde, plus puissante
+que celle du sens commun''.
 
 À travers cette séquence pédagogique, l'élève aura pu affleurer par la pratique
 le mode de création des connaissances scientifiques par confrontation et
@@ -352,9 +364,11 @@ auteurs\ldots
 % ça c'est un colophon:
 % C'est surtout du prosélitisme!
 % ben oui, pourquoi pas?
-\emph{Document réalisé en \href{https://www.latex-project.org/}{\LaTeX}.
-  Bibliographie gérée avec \href{http://www.bibtex.org/}{Bib\TeX}}.\par
-\emph{Sources disponibles \href{https://github.com/Dalker/didac_010}{sur github}.}
+\emph{Document réalisé en \href{https://www.latex-project.org/}{\LaTeX}.}\par
+\emph{Bibliographie gérée par \href{http://www.bibtex.org/}{Bib\TeX}} {\small
+(avec le style APA comme demandé).}}\par
+\emph{Sources disponibles \href{https://github.com/Dalker/didac_010}{sur
+    github}.}
 
 % et puis on inclut des annexes
 \section*{Annexe 1: définition des groupes et du projet} % pas numéroté, pas au toc
