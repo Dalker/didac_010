@@ -51,6 +51,9 @@ pdftitle={Conception d'une séquence}]{hyperref}
 \definecolor{pdflinkcolor}{RGB}{30,60, 120}
 \hypersetup{colorlinks=true, allcolors=pdflinkcolor}
 
+% son ajout post-relecture
+\newcommand\ajout[1]{{\color{blue} #1}}
+
 \begin{document}
 \thispagestyle{plain}  % page de garde sans bas de page
 
@@ -61,12 +64,12 @@ pdftitle={Conception d'une séquence}]{hyperref}
 
 % Et c'est parti pour du contenu!
 \section{Contexte institutionnel et disciplinaire}
-Nous enseignons tous deux au niveau gymnasial dans le Collège de Genève (Gymnase). Dans ce
-cadre, nous avons cette année plusieurs groupes d'élèves de 1ère année
-informatique discipline fondamentale, auxquels s'adresse le travail présenté
-dans ce document. Ces groupes sont constitués de 16 élèves au maximum, issus
-potentiellement de plusieurs ``classes', OS, etc.  (le concept de ``classe'' est très flou
-au Collège, les élèves changeant souvent de groupe).
+Nous enseignons tous deux au niveau gymnasial dans le Collège de Genève
+(Gymnase). Dans ce cadre, nous avons cette année plusieurs groupes d'élèves de
+1ère année informatique discipline fondamentale, auxquels s'adresse le travail
+présenté dans ce document. Ces groupes sont constitués de 16 élèves au maximum,
+issus potentiellement de plusieurs ``classes'', OS, etc.  (le concept de
+``classe'' est très flou au Collège, les élèves changeant souvent de groupe).
 
 La séquence d'enseignement que nous allons présenter possède deux
 caractéristiques originales:
@@ -83,9 +86,11 @@ caractères \textsc{ascii}, bitmaps) et travaillé un petit peu sur les composan
 matériels d'un ordinateur, éléments du chapitre \textit{Information et Données}
 du plan d'étude cantonal genevois \autocite{pecinfo}.
 
-L'objectif explicite initial sera développé dans la partie suivante. L'originalité de cette séquence 
-repose sur le deuxième objectif. Celui-ci consiste à découvrir la puissance des outils informatiques 
-de collaboration pour déboucher finalement sur un exemple iconique: \textit{Wikipedia}.
+L'objectif explicite initial sera développé dans la partie
+suivante. L'originalité de cette séquence repose sur le deuxième
+objectif. Celui-ci consiste à découvrir la puissance des outils informatiques de
+collaboration pour déboucher finalement sur un exemple iconique:
+\textit{Wikipedia}.
 
 Ce deuxième objectif participe à plusieurs thèmes du plan d'étude, notamment les
 \textit{Réseaux}, \textit{Information et Données} et la \textit{Citoyenneté
@@ -119,11 +124,11 @@ information caduque ou incomplète, voire en produisant de nouvelles pages.
 
 \section{Scénario d'apprentissage}
 Les élèves seront amenés à travailler entre 20 et 30 minutes chaque semaine,
-pendant 6 semaines, sur leurs projets. Le travail s'effectue en grande
-partie autour de la conception d'un wiki par chaque groupe. Une fois ce travail
-achevé, une transposition est effectuée du mode de travail employé par les
-élèves vers la manière dont fonctionne Wikipedia, en clarifiant que les élèves
-sont maintenant habilités à y contribuer s'ils le souhaitent.
+pendant 6 semaines, sur leurs projets. Le travail s'effectue en grande partie
+autour de la conception d'un wiki par chaque groupe. Une fois ce travail achevé,
+une transposition est effectuée du mode de travail employé par les élèves vers
+la manière dont fonctionne Wikipedia, en clarifiant que les élèves sont
+maintenant habilités à y contribuer s'ils le souhaitent.
 
 Voici le calendrier général de la séquence.
 \begin{center}
@@ -255,7 +260,7 @@ encodage et décodage d'un nombre à virgule flottante) et la connaissance
 meta-cognitive (évaluation de leur sujet d'apprentissage afin d'en transmettre
 les avantages et inconvénients), on peut constater qu'on traverse tous les
 niveaux taxonomiques de Bloom (cf. \cite{bloom}), ce qui rend la méthode de cette séquence
-particulièrement intéressante.
+particulièrement intéressante. \ajout{et ici on va expliciter tout ça [test d'ajout]}
 
 \subsection{Plan des sujets implicites: Wikis -> Wikipedia -> Open Source}
 Dans le plan de l'outil utilisé pour collaborer et transmettre l'information,
@@ -366,7 +371,7 @@ auteurs\ldots
 % ben oui, pourquoi pas?
 \emph{Document réalisé en \href{https://www.latex-project.org/}{\LaTeX}.}\par
 \emph{Bibliographie gérée par \href{http://www.bibtex.org/}{Bib\TeX}} {\small
-(avec le style APA comme demandé).}}\par
+(avec le style APA comme demandé).}\par
 \emph{Sources disponibles \href{https://github.com/Dalker/didac_010}{sur
     github}.}
 
@@ -381,6 +386,5 @@ auteurs\ldots
 
 \section*{Annexe 3: grille d'évaluation du projet} % pas numéroté, pas au toc
 \includegraphics[width=.95\textwidth]{annexes/evaluation.pdf}
-
 
 \end{document}
