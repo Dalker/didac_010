@@ -7,8 +7,8 @@
   \large GymInf, Didactique de l'informatique, Rendu 010}
 
 % son français
+%\usepackage{csquotes}
 \usepackage[french]{babel}
-\usepackage{csquotes}
 
 % Sa gestion de bibliographie
 % NB: nos consignes nous demandent d'utiliser les normes APA
@@ -23,6 +23,8 @@
 \usepackage[french]{babel}  % langue du document
 \usepackage{graphicx}  % pour inclure des images et des pdf
 \usepackage{array} % pour les tableaux?
+\usepackage{booktabs}  % pour des tablulars plus jolis
+\renewcommand{\arraystretch}{1.2}
 
 % configuration des polices de caractère / aspect du titre
 \usepackage[utf8]{inputenc}  % nécessaire en MS-Windows, pas dans Linux
@@ -52,8 +54,10 @@ pdftitle={Conception d'une séquence}]{hyperref}
 \definecolor{pdflinkcolor}{RGB}{30,60, 120}
 \hypersetup{colorlinks=true, allcolors=pdflinkcolor}
 
-% son ajout post-relecture
+% ses ajouts post-relecture
 \newcommand\ajout[1]{{\color{blue} #1}}
+\newcommand\rajout[1]{{\color{green} #1}}
+\newcommand\rajouts[1]{{\color{cyan} #1}}
 
 \begin{document}
 \thispagestyle{plain}  % page de garde sans bas de page
@@ -61,6 +65,14 @@ pdftitle={Conception d'une séquence}]{hyperref}
 % Démarrage avec titre et table des matières sur page séparée
 \maketitle
 \tableofcontents  % <- au début, on n'est pas des frouzes qui mettent ça à la fin...
+\vfill
+Code des couleurs:
+\begin{itemize}
+\item \ajout{modifications/ajouts suite à commentaires des pairs}\par
+\item \rajout{modifications/ajouts suite à commentaires du formateur}\par
+\item \rajouts{modifications/ajouts suite à commentaires des pairs et du formateur}\par
+\end{itemize}
+\vfill
 \pagebreak
 
 % Et c'est parti pour du contenu!
@@ -123,24 +135,40 @@ devrait comprendre le mécanisme de base et se sentir capable de contribuer à
 \textit{Wikipedia}, que ce soit en repérant une coquille à corriger, une
 information caduque ou incomplète, voire en produisant de nouvelles pages.
 
-\ajout {
-Voici un tableau synthétisant les principaux objectifs concernés par cette séquence:
+\rajouts {
+Voici un tableau synthétisant les principaux objectifs ``implicites'' concernés par cette séquence:
 \begin{center}
-   \begin{tabular}{| c | m{.32\textwidth} | m{.32\textwidth} | }
-     \hline
+   \begin{tabular}{@{}lm{.35\textwidth}m{.35\textwidth}@{}}\toprule
      Activité & Objectifs %(généraux ou terminaux)
      & Indicateurs (évaluation) \\ 
-     \hline\hline
+     \midrule
      Introduction & Savoir s'organiser au sein d'un groupe & Formulaire correctement renseigné \\ 
-     \hline
      Documentation & Savoir trier les informations utiles & Choix des sources et arguments de validation \\
-     \hline
      Reformulation & Savoir adapter des sources au niveau du public & Commentaires des pairs \\
-     \hline
      Utilisation des wikis & Savoir utiliser un outil de collaboration & Observation du groupe, résultat \\
-     \hline
+     \bottomrule
    \end{tabular}
  \end{center}
+}
+
+\rajout{Selon le choix des sujets, divers objectifs directement en lien avec le
+  \cite{pecinfo} seront aussi présents. La liste ci-dessous indique certains
+  éléments ayant émergé de certains travaux d'élèves lors de la première mise en
+  oeuvre de cette séquence:
+\begin{itemize}
+\item concernant la \textit{représentation numérique de l'information}:
+  \begin{itemize}
+  \item distinguer une donnée \textit{analogique} (continue) d'une donnée
+    \textit{digitale} (discrète) [avec le sujet ``encodage du son'']
+  \item ``distinguer les avantages et inconvénients'' de certains
+    encodages [avec le sujet ``encoder des caractères hors-ASCII'']
+  \item ``comprendre que l'ordinateur encode de différentes
+    manières'' [avec les sujets ``encodage des nombres entiers
+    relatifs'' et ``encodage des nombres à virgule flottante'']
+  \item ``identifier le rôle des composants principaux d'un ordinateur'' [avec
+    le sujet ``composants d'un smartphone'']
+  \end{itemize}
+\end{itemize}
 }
 
 \section{Scénario d'apprentissage}
@@ -186,18 +214,24 @@ encore explicitement question de wiki (éviter la surcharge cognitive: pour
 l'instant, on cherche un sujet et on essaye de constituer des groupes d'élèves
 pouvant fonctionner ensemble de manière efficace et agréable).
 
-Les groupes d'élèves sont constitués et un sujet choisi par chacun (cf. Annexe
-1). Les élèves sont invités à choisir un élément de la partie du cours précédent
-qu'ils souhaitent approfondir. Le rôle de l'enseignant à cette étape est de se
-balader entre les groupes et s'assurer que chacun arrive à choisir un thème qui
-est pertinent pour le cours et intéresse réellement les élèves du
-groupe. \ajout{Il donne des conseils sur l'organisation: délégation de tâches,
-  domaines de compétences de chacun, etc.}
+\rajout{Avant de commencer, l'enseignant récapitule brièvement ce qui a été déjà
+  vu sur la thématique de la représentation des données et donne quelques
+  exemples de questions restées ouvertes et d'encodages important qui n'ont été
+  qu'effleurés mais pas traités en détail, constituant ainsi des sujets
+  possibles pour les futurs projets.}  Les groupes d'élèves sont constitués et
+un sujet choisi par chacun (cf. Annexe \ref{annexe:groupes}). Les élèves sont
+invités à choisir un élément de la partie du cours précédent qu'ils souhaitent
+approfondir. Le rôle de l'enseignant à cette étape est de se balader entre les
+groupes et s'assurer que chacun arrive à choisir un thème qui est pertinent pour
+le cours et intéresse réellement les élèves du groupe. \ajout{Il donne des
+  conseils sur l'organisation: délégation de tâches, domaines de compétences de
+  chacun, etc.}
 
 \subsection{Situation d'apprentissage}
 Les élèves ont accès assez vite à une version en-ligne du calendrier des
-objectifs minimaux à atteindre chaque semaine pour les semaines 2 à 6. Ce
-calendrier peut être adapté suivant les éventuels imprévus.
+objectifs minimaux à atteindre chaque semaine pour les semaines 2 à 6
+\rajout{(cf. Annexe \ref{annexe:calendrier})}. Ce calendrier peut être adapté
+suivant les éventuels imprévus.
 
 Une fois les groupes constitués, un moment ``frontal'' d'une dizaine de minutes
 est utilisé par l'enseignant pour montrer aux élèves les rudiments du
@@ -213,21 +247,27 @@ projet, avec des objectifs minimaux chaque semaine. Aucun ``devoir à la maison'
 explicite n'est donné, mais il est indiqué que s'ils le souhaitent, ils peuvent
 avancer sur leur projet en dehors des heures de cours.
 
+\rajout{Pendant ces périodes, l'enseignant se balade entre les groupes, observe
+  leur travail et intéragit avec eux afin d'encourager et valider leurs méthodes
+  de travail plutôt que les informations trouvées. Cette démarche se rapproche
+  un peu de la méthode \textsc{pogil} (Process Oriented Guided Inquiry Learning,
+  cf. \url{https://pogil.org}).}
+
 \subsection{Objectivation}
 Chaque élève est amené à évaluer le wiki d'un autre groupe lors de la semaine
 4. Cette étape devrait lui permettre de se détacher de son propre travail,
 prendre du recul et y revenir avec un regard neuf. De plus, cette étape permet
 une évaluation formative par les pairs. Chaque élève se voit assigner le wiki
 d'un autre projet lors de la semaine 4. Il reçoit à cet effet une feuille dont
-le modèle se trouve à l'Annexe 2. Il devra laisser au moins trois commentaires
-constructifs dans le wiki qui lui est assigné, et remplir et rendre la feuille
-qui lui a été fournie, en montrant notamment en quoi la navigation d'un autre
-wiki lui aura donné des idées pour son propre projet.  \ajout {L'enseignant a le
-  rôle de s'assurer que les élèves comprennent bien le leur. C'est-à-dire que
-  leurs commentaires doivent être bienveillants mais toutefois réalistes et
-  constructifs pour permettre une double amélioration: celle du wikis évalué,
-  bien entendu, mais également celle de son propre wiki, suite à la comparaison
-  entre celui-ci et celui qui est évalué.}
+le modèle se trouve à l'Annexe \ref{annexe:pairs}. Il devra laisser au moins
+trois commentaires constructifs dans le wiki qui lui est assigné, et remplir et
+rendre la feuille qui lui a été fournie, en montrant notamment en quoi la
+navigation d'un autre wiki lui aura donné des idées pour son propre projet.
+\ajout {L'enseignant a le rôle de s'assurer que les élèves comprennent bien le
+  leur. C'est-à-dire que leurs commentaires doivent être bienveillants mais
+  toutefois réalistes et constructifs pour permettre une double amélioration:
+  celle du wikis évalué, bien entendu, mais également celle de son propre wiki,
+  suite à la comparaison entre celui-ci et celui qui est évalué.}
 
 \subsection{Situation d'évaluation}
 L'évaluation notée (donc ``sommative'') de cette séquence prend en compte trois
@@ -236,14 +276,30 @@ groupes de critères distincts:
 \item l'atteinte des objectifs minimaux à la fin de chaque semaine (sorte de
   ``contrôle continu'', évaluant la motivation et l'autonomie du groupe)
 \item le wiki ``finalisé'' (entre guillemets parce qu'il peut encore être édité
-  après: c'est bien un des buts de travailler avec un wiki!)
+  après: c'est bien un des buts de travailler avec un wiki!). \rajout{Celui-ci
+    est évalué aussi bien concernant la forme que le contenu.}
 \item la présentation orale (semaine 6)
 \end{itemize}
-Le détail des critères se trouve dans l'Annexe 3. Il est modelé partiellement
-sur les critères d'évaluation officiels du Travail de Maturité. D'ailleurs, le
-mode de travail et d'évaluation devrait permettre aussi de donner aux élèves de
-1ère année un avant-goût d'un TM de type ``travail de recherche'' dans un domaine
-scientifique (ce qui peut être explicité à la fin).
+\rajout{Une période de remédiation peut en outre être prévue après une première
+  évaluation notée. Elle permet aux groupes qui les souhaitent d'améliorer leur
+  wiki (forme et contenu) après leur présentation orale (dont un aspect
+  important est constitué des questions de leurs camarades -- il est conseillé
+  d'imposer un quota minimal d'une question de la part de chaque autre
+  groupe). Cette remédiation éventuelle a lieu après avoir reçu une première
+  évaluation chiffrée et des commentaires écrits de la part de l'enseignant, et
+  elle ne concerne que le wiki lui-même. Les points donnés au \textit{contrôle
+    continu} et à la présentation orale ne peuvent en revanche plus être
+  modifiés. Cette étape est l'occasion de clarifier les critères d'évaluation du
+  \textit{fond} et de la \textit{forme} du wiki en prenant aussi en compte les
+  réactions des camarades lors des phases de \textit{commentaire d'un autre
+    wiki} et \textit{questions pendant la présentation orale}, ainsi que les
+  commentaires plus formels de l'enseignant.}
+
+Le détail des critères se trouve dans l'Annexe \ref{annexe:grille}. Il est
+modelé partiellement sur les critères d'évaluation officiels du Travail de
+Maturité. D'ailleurs, le mode de travail et d'évaluation devrait permettre aussi
+de donner aux élèves de 1ère année un avant-goût d'un TM de type ``travail de
+recherche'' dans un domaine scientifique (ce qui peut être explicité à la fin).
 
 \subsection{Situation de réinvestissement}
 En tant qu'épilogue à la séquence, une discussion collective est lancée
@@ -260,9 +316,17 @@ chasseur. Un des domaines d'expertise pourrait être la connaissance de leur
 inexistant.  Dans un deuxième temps, une modification des articles pourra être
 faite, soit de manière centralisée à travers l'enseignant, soit de nouveau par
 petits groupe, sous la forme de mini projets ``amélioration de Wikipedia''.
-\ajout {
-Un atelier ``création de nouvelle(s) page(s) Wikipedia'' peut également être réalisé pour enrichir la connaissance globale et mettre en valeur les connaissances de nos élèves. Si l'imagination manquait, on pourrait tout de même traduire des articles intéressants (par exemple articles informatiques liés aux thèmes abordés par les élèves dans leur Wikis) de l'anglais vers le français. Ceci pourrait d'ailleurs donner lieu à une collaboration transdisciplinaire avec un enseignant d'anglais. Malheureusement, avec les groupes d'élèves hétérogènes que nous avons, les élèves se retrouveront dans plusieurs cours d'anglais différents, ce qui compliquera sa réalisation mais ce serait probablement possible dans des établissements avec des groupes-classe compacts.
-}
+\ajout {Un atelier ``création de nouvelle(s) page(s) Wikipedia'' peut également
+  être réalisé pour enrichir la connaissance globale et mettre en valeur les
+  connaissances de nos élèves. Si l'imagination manquait, on pourrait tout de
+  même traduire des articles intéressants (par exemple articles informatiques
+  liés aux thèmes abordés par les élèves dans leur Wikis) de l'anglais vers le
+  français. Ceci pourrait d'ailleurs donner lieu à une collaboration
+  transdisciplinaire avec un enseignant d'anglais. Malheureusement, avec les
+  groupes d'élèves hétérogènes que nous avons, les élèves se retrouveront dans
+  plusieurs cours d'anglais différents, ce qui compliquera sa réalisation mais
+  ce serait probablement possible dans des établissements avec des
+  groupes-classe compacts.  }
 
 Conclusion prévue quelle que soit la teneur de l'``épilogue'' à cette séquence:
 les élèves pourront par la suite, en tant que ``citoyens numériques'',
@@ -296,23 +360,20 @@ les avantages et inconvénients), on peut constater qu'on traverse tous les
 niveaux taxonomiques de Bloom (cf. \cite{bloom}), ce qui rend la méthode de cette séquence
 particulièrement intéressante. 
 \ajout{
-Voici de manière synthétique les différents niveaux de la taxonomie de Bloom mis en jeu pour les objectifs ``explicites'':
-
+Voici de manière synthétique les différents niveaux de la taxonomie de Bloom mis en jeu pour les objectifs ``explicites'':}
+\rajout{
 \begin{center}
-   \begin{tabular}{| m{.2\textwidth} | m{.2\textwidth} | m{.5\textwidth} | }
-     \hline
+   \begin{tabular}{@{}m{.2\textwidth}m{.18\textwidth}m{.5\textwidth}@{}}\toprule
      Activité élève & Niveau (Bloom) & Exemple(s) \\ 
-     \hline
+     \midrule
      Apprentissage des connaissances & ``Remember'' et ``Understand'' & Mémorisation / Compréhension pour transmettre / expliquer ces connaissances aux camarades \\ 
-     \hline
      Production d'exemples & ``Apply'' & Mise en pratique des notions sur un exemple explicatif \\
-     \hline
      Critique du savoir acquis & ``Analyse'' et ``Evaluate'' & Capacité d'un
                                                                regard critique
                                                                vis-à-vis du
                                                                travail d'un
                                                                autre groupe (complexité, utilité, etc.) \\
-     \hline
+     \bottomrule
    \end{tabular}
  \end{center}
 }
@@ -329,15 +390,14 @@ Wikipedia puis de haut niveau avec les retours ``philosophiques'' sur
 l'importance de Wikipedia et, plus largement, des courants \textit{open source},
 \textit{logiciel libre}, etc.  \ajout{Voici de manière synthétique les
   différents niveaux de la taxonomie de Bloom mis en jeu pour les objectifs
-  ``implicites'':
-
+  ``implicites'':}
+\rajout{
 \begin{center}
-   \begin{tabular}{| m{.25\textwidth} | m{.2\textwidth} | m{.45\textwidth} | }
-     \hline
+   \begin{tabular}{@{}m{.25\textwidth}m{.2\textwidth}m{.45\textwidth}@{}}
+     \toprule
      Activité & Niveau (Bloom) & Exemple(s) \\ 
-     \hline
+     \midrule
      Utilisation des Wikis & ``Apply'' & Essais/erreurs pour utiliser l'outil de manière efficace \\ 
-     \hline
      Théorie sur Wikipedia & ``Remember'' et ``Understand'' & Explication
                                                               ``frontale'' de
                                                               l'enseignant pour
@@ -345,19 +405,17 @@ l'importance de Wikipedia et, plus largement, des courants \textit{open source},
                                                               fonctionnement
                                                               d'un wiki et ce
                                                               qu'est Wikipedia \\
-     \hline
      Analyse plus large & ``Analyse'' et ``Evaluate'' & Compréhension des enjeux
                                                         sociétaux, du courant
                                                         ``open'', du rôle des outils dans cette ``philosophie'' \\
 
-     \hline
      Optionnel: étape wikipedia & ``Create'' & Il faudrait nettement plus de
                                                  temps pour que les élèves
                                                  puissent créer un contenu
                                                  totalement original sur un
                                                  autre sujet\\
 %     - & ``Create'' & Il faudrait consacrer nettement plus de temps pour que les élèves créent des outils de collaboration innovateurs... \\
-     \hline
+     \bottomrule
    \end{tabular}
  \end{center}
 }
@@ -387,9 +445,14 @@ des élèves trop conformistes ou ``scolaires'' (dans le mauvais sens du terme).
 La complexité des sujets doit être gérée par l'enseignant. Celui-ci doit veiller
 à cadrer les sujets pour qu'ils restent dans un intervalle de complexité
 accessible à l'ensemble des élèves. Sinon, les sujets d'étude risquent de
-prendre le dessus sur l'outil (wiki) qu'on veut mettre en lumière. En effet, le
-temps-cerveau nécessaire à la compréhension des sujets explicites va empêcher
-les élèves d'approfondir la notion de wiki et Wikipedia.  La difficulté
+prendre le dessus sur l'outil (wiki) qu'on veut mettre en lumière.
+\rajout{L'intervention de l'enseignant est donc indispensable lors de la phase
+  de choix du sujet. Elle peut se décliner suivant deux modalités: choix de
+  sujet initialement libre pour les élèves, ensuite validé ou réorienté selon
+  besoin par l'enseignant; alternativement, l'enseignant peut fournir une liste
+  prédéfinie de sujets possibles parmi lesquels les élèves doivent choisir.} En
+effet, le temps-cerveau nécessaire à la compréhension des sujets explicites va
+empêcher les élèves d'approfondir la notion de wiki et Wikipedia.  La difficulté
 intrinsèque de l'apprentissage des wikis ne semble pas, elle, inatteignable.
 
 \subsection{Suivi des projets}
@@ -466,15 +529,26 @@ auteurs\ldots
     github}.}
 
 % et puis on inclut des annexes
-\section*{Annexe 1: définition des groupes et du projet} % pas numéroté, pas au toc
+\newcounter{annexe}
+\newcommand\annexe[1]{\refstepcounter{annexe}\section*{Annexe \theannexe:\ #1}}
+\annexe{Définition des groupes et du projet} % pas au toc, mais labelisable séparémment
+\label{annexe:groupes}
 \addcontentsline{toc}{section}{Annexes: supports de cours}  % ajouter au toc
                                 % (une entrée pour tous les annexes)
 \includegraphics[width=.95\textwidth]{annexes/projet1.pdf}
 
-\section*{Annexe 2: évaluation par les pairs} % pas numéroté, pas au toc
+\annexe{\rajout{Exemple de calendrier}}
+\label{annexe:calendrier}
+\begin{center}
+  \includegraphics[width=.9\textwidth]{annexes/calendrier.png}
+\end{center}
+
+\annexe{Évaluation par les pairs} % pas numéroté, pas au toc
+\label{annexe:pairs}
 \includegraphics[width=.95\textwidth]{annexes/pairs.pdf}
 
-\section*{Annexe 3: grille d'évaluation du projet} % pas numéroté, pas au toc
+\annexe{Grille d'évaluation du projet} % pas numéroté, pas au toc
+\label{annexe:grille}
 \includegraphics[width=.95\textwidth]{annexes/evaluation.pdf}
 
 \end{document}
